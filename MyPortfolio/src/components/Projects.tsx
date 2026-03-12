@@ -3,6 +3,7 @@ import {
   Typography,
   Card,
   CardContent,
+  CardMedia,
   Grid,
   Box,
 } from "@mui/material";
@@ -17,6 +18,13 @@ export default function Projects() {
       <Grid container spacing={3}>
         <Grid size={{ xs: 12, md: 6 }}>
           <Card sx={{ height: "100%" }}>
+<CardMedia
+  component="img"
+  height="220"
+  image="/images/test.png"
+  alt="Preview of CodeX Platform project"
+  sx={{ objectFit: "cover" }}
+/>
             <CardContent>
               <Typography variant="h6" gutterBottom>
                 CodeX Platform
@@ -55,6 +63,13 @@ export default function Projects() {
 
         <Grid size={{ xs: 12, md: 6 }}>
           <Card sx={{ height: "100%" }}>
+<CardMedia
+  component="img"
+  height="220"
+  image="/images/test.png"
+  alt="Preview of CodeX Platform project"
+  sx={{ objectFit: "cover" }}
+/>
             <CardContent>
               <Typography variant="h6" gutterBottom>
                 CodeX GameDevX
@@ -92,6 +107,13 @@ export default function Projects() {
 
         <Grid size={{ xs: 12, md: 6 }}>
           <Card sx={{ height: "100%" }}>
+<CardMedia
+  component="img"
+  height="220"
+  image="/images/test.png"
+  alt="Preview of CodeX Platform project"
+  sx={{ objectFit: "cover" }}
+/>
             <CardContent>
               <Typography variant="h6" gutterBottom>
                 Smart Greenhouse
@@ -127,6 +149,13 @@ export default function Projects() {
 
 <Grid size={{ xs: 12, md: 6 }}>
   <Card sx={{ height: "100%" }}>
+<CardMedia
+  component="img"
+  height="220"
+  image="/images/test.png"
+  alt="Preview of CodeX Platform project"
+  sx={{ objectFit: "cover" }}
+/>
     <CardContent>
       <Typography variant="h6" gutterBottom>
         2048 Game
@@ -164,6 +193,13 @@ export default function Projects() {
 
 <Grid size={{ xs: 12, md: 6 }}>
   <Card sx={{ height: "100%" }}>
+<CardMedia
+  component="img"
+  height="220"
+  image="/images/test.png"
+  alt="Preview of CodeX Platform project"
+  sx={{ objectFit: "cover" }}
+/>
     <CardContent>
       <Typography variant="h6" gutterBottom>
         Kernel OS
