@@ -8,7 +8,7 @@ import
 
 export default function Skills(){
     return (
-        <Container sx={{ px: 8}}>
+        <Container sx={{}}>
             
             <Typography variant="h4">
                 Skills

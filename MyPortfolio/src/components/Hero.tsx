@@ -10,7 +10,7 @@ export default function Hero()
         <Box sx={{ py: 10, textAlign: "center" }}>
             <Container maxWidth="md">
                 <Typography variant="h3">
-                    Mahmod
+                    Mahmod Mohammad
                 </Typography>
 
                 <Typography variant="h6" sx={{ mt: 2}}>
