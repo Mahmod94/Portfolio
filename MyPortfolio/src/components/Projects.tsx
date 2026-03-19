@@ -21,7 +21,7 @@ export default function Projects() {
 <CardMedia
   component="img"
   height="220"
-  image="/images/test.png"
+  image="/images/codeXCalendar.png"
   alt="Preview of CodeX Platform project"
   sx={{ objectFit: "cover" }}
 />
