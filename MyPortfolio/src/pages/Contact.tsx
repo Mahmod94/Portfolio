@@ -1,26 +1,17 @@
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Box } from "@mui/material";
 
-export default function Contact(){
-    return (
-        <Container sx={{ py: 8 }}>
+export default function Contact() {
+  return (
+    <Container sx={{ py: 8 }}>
+      <Typography variant="h4" gutterBottom>
+        Contact
+      </Typography>
 
-            <Typography variant="h4">
-                Contact
-            </Typography>
-
-            <Typography>
-                Email: "will be new work mail later"
-            </Typography>
-
-            <Typography>
-                Github: https://github.com/Mahmod94
-            </Typography>
-
-            <Typography>
-                LinkedIn: kommer senare
-            </Typography>
-
-
-        </Container>
-    );
+      <Box sx={{ mt: 2 }}>
+        <Typography>Email: ..@email.com</Typography>
+        <Typography>GitHub: github.com/..</Typography>
+        <Typography>LinkedIn: linkedin.com/in/..</Typography>
+      </Box>
+    </Container>
+  );
 }

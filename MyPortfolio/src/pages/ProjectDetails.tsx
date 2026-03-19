@@ -38,24 +38,20 @@ export default function ProjectDetails() {
 
   return (
     <Container sx={{ py: 8 }}>
-      {/* BACK BUTTON */}
       <Button component={RouterLink} to="/projects" sx={{ mb: 4 }}>
         ← Back to Projects
       </Button>
 
-      {/* TITLE */}
       <Typography variant="h3" gutterBottom>
         {project.title}
       </Typography>
 
-      {/* STACK */}
       <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, mb: 4 }}>
         {project.stack.map((tech) => (
           <Chip key={tech} label={tech} />
         ))}
       </Box>
 
-      {/* HERO IMAGE */}
       <Card sx={{ mb: 5 }}>
         <CardMedia
           component="img"
@@ -65,47 +61,59 @@ export default function ProjectDetails() {
         />
       </Card>
 
-      {/* OVERVIEW */}
       <Section title="Overview">
         <Typography>{project.fullDescription}</Typography>
       </Section>
 
-      {/* WHAT I BUILT */}
       {project.whatIBuilt && (
         <Section title="What I Built">
           <List items={project.whatIBuilt} />
         </Section>
       )}
 
-      {/* KEY CONTRIBUTIONS */}
       <Section title="Key Contributions">
         <List items={project.highlights} />
       </Section>
 
-      {/* TECHNICAL HIGHLIGHTS */}
+      {project.architectureImage && (
+        <Section title="System Architecture">
+          {project.architectureDescription && (
+            <Typography sx={{ mb: 3 }}>
+              {project.architectureDescription}
+            </Typography>
+          )}
+
+          <Card>
+            <CardMedia
+              component="img"
+              image={project.architectureImage}
+              alt={`${project.title} architecture diagram`}
+              sx={{ objectFit: "contain", p: 2, backgroundColor: "#fff" }}
+            />
+          </Card>
+        </Section>
+      )}
+
       {project.technicalHighlights && (
         <Section title="Technical Highlights">
           <List items={project.technicalHighlights} />
         </Section>
       )}
 
-      {/* CHALLENGES */}
       {project.challenges && (
         <Section title="Challenges">
           <List items={project.challenges} />
         </Section>
       )}
 
-      {/* OUTCOME */}
       {project.outcome && (
         <Section title="Outcome">
           <Typography>{project.outcome}</Typography>
         </Section>
       )}
 
-      {/* IMAGES */}
       {project.screenshots && project.screenshots.length > 0 && (
-        <Section title="Project Images">
+        <Section title="Additional Visuals">
           <Grid container spacing={3}>
             {project.screenshots.map((screenshot, index) => (
               <Grid key={`${project.id}-${index}`} size={{ xs: 12, md: 6 }}>
@@ -126,10 +134,6 @@ export default function ProjectDetails() {
   );
 }
 
-///////////////////////////////////////////////////////////////////////////
-// 🔹 Reusable Section Component
-///////////////////////////////////////////////////////////////////////////
-
 type SectionProps = {
   title: string;
   children: React.ReactNode;
@@ -148,10 +152,6 @@ function Section({ title, children }: SectionProps) {
     </Box>
   );
 }
-
-///////////////////////////////////////////////////////////////////////////
-// 🔹 Reusable List Component
-///////////////////////////////////////////////////////////////////////////
 
 type ListProps = {
   items: string[];
