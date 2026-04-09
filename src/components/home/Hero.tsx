@@ -24,7 +24,7 @@ export default function Hero() {
             </Typography>
 
             <Typography sx={{ mt: 3, maxWidth: 700 }}>
-              Computer Engineering student with experience from real 
+              Computer Engineer with experience from real 
               development environments,
               including frontend and Unity-related work at CodeX and hands-on involvement in team-based programming projects.
             </Typography>
