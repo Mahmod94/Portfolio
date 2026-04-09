@@ -46,13 +46,12 @@ export default function Hero() {
               </Typography>
 
               <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
+                <Chip label="Java" />
                 <Chip label="React" />
                 <Chip label="TypeScript" />
-                <Chip label="Java" />
                 <Chip label="C" />
                 <Chip label="Embedded Systems" />
                 <Chip label="Git" />
-                <Chip label="Azure DevOps" />
                 <Chip label="Unity" />
               </Stack>
             </Paper>
