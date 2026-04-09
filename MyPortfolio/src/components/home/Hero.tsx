@@ -15,12 +15,18 @@ export default function Hero() {
               variant="h5"
               sx={{ mt: 2, color: "text.secondary", maxWidth: 700 }}
             >
-              Software Developer focused on React, Java and Embedded Systems
+              Software Developer focused on Java, React and Embedded Systems
+            </Typography>
+            <Typography sx={{ mt: 3, maxWidth: 700 }}>
+              I build structured software systems ranging from frontend applications to
+              low-level embedded solutions, with a focus on clean architecture,
+              maintainability and practical functionality.
             </Typography>
 
             <Typography sx={{ mt: 3, maxWidth: 700 }}>
-              Computer Engineering student building projects in frontend development,
-              object-oriented programming and low-level embedded systems.
+              Computer Engineering student with experience from real 
+              development environments,
+              including frontend and Unity-related work at CodeX and hands-on involvement in team-based programming projects.
             </Typography>
 
             <Stack direction="row" spacing={2} sx={{ mt: 4 }}>
@@ -46,6 +52,8 @@ export default function Hero() {
                 <Chip label="C" />
                 <Chip label="Embedded Systems" />
                 <Chip label="Git" />
+                <Chip label="Azure DevOps" />
+                <Chip label="Unity" />
               </Stack>
             </Paper>
           </Grid>

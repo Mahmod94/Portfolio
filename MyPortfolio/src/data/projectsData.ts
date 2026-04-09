@@ -19,42 +19,48 @@ export type Project = {
 
 
 export const projectsData: Project[] = [
-  {
-    id: "codex-platform",
-    title: "CodeX Platform",
-    shortDescription:
-      "Frontend development of a React-based platform with event integration and reusable UI sections.",
-    fullDescription:
-      "Contributed to the development of the CodeX website together with other team members. I worked mainly on frontend implementation, including sections of the Home page and the About Us page, using React, TypeScript and Material UI. I also worked with simple backend-connected data and event content fetched from Google Calendar.",
-    stack: ["React", "TypeScript", "Material UI", "C#"],
-    image: "/images/codeXCalendar.png",
-    highlights: [
-      "Implemented the Home page based on provided UI design",
-      "Developed the About Us page",
-      "Built reusable frontend components using React and Material UI",
-      "Connected the frontend to a simple backend service",
-      "Worked with event data fetched from Google Calendar and shown on the Home page",
-    ],
-    screenshots: [
-      "/images/codeXCalendar.png",
-      "/images/OmCodeX Intro.png",
-      "/images/ProcessSection.png",
-      "/images/WhoWeAre.png",
-      "/images/testimonials.png",
-    ],
-    whatIBuilt: [
-      "Implemented reusable UI sections for the Home page and About Us page",
-      "Worked with frontend integration for backend-connected event content",
-      "Translated provided designs into React components using Material UI",
-    ],
-    technicalHighlights: [
-      "Reusable component structure",
-      "Frontend data integration",
-      "Responsive section-based layout",
-    ],
-    outcome:
-      "The project strengthened my experience in collaborative frontend development, design implementation, and React component structuring.",
-  },
+{
+  id: "codex-platform",
+  title: "CodeX Platform",
+  shortDescription:
+    "Frontend development of a React-based platform with event integration, reusable UI sections and partner logo presentation.",
+  fullDescription:
+    "Contributed to the development of the CodeX website together with other team members. I worked mainly on frontend implementation, including sections of the Home page and the About Us page, using React, TypeScript and Material UI. I also worked with simple backend-connected data and event content fetched from Google Calendar. In addition, I implemented reusable visual sections such as the partner showcase area and worked with SVG-based company logos in the UI.",
+  stack: ["React", "TypeScript", "Material UI", "C#"],
+  image: "/images/codeXCalendar.png",
+  highlights: [
+    "Implemented the Home page based on provided UI design",
+    "Developed the About Us page",
+    "Built reusable frontend components using React and Material UI",
+    "Connected the frontend to a simple backend service",
+    "Worked with event data fetched from Google Calendar and shown on the Home page",
+    "Implemented a partner section with company logos integrated into the frontend",
+  ],
+  screenshots: [
+    "/images/codeXCalendar.png",
+    "/images/OmCodeX Intro.png",
+    "/images/ProcessSection.png",
+  ],
+  whatIBuilt: [
+    "Implemented reusable UI sections for the Home page and About Us page",
+    "Worked with frontend integration for backend-connected event content",
+    "Translated provided designs into React components using Material UI",
+    "Built a partner showcase section and integrated company logos into the interface",
+  ],
+  technicalHighlights: [
+    "Reusable component structure",
+    "Frontend data integration",
+    "Responsive section-based layout",
+    "SVG/logo-based UI integration",
+  ],
+  challenges: [
+  "Adapting quickly to a new frontend stack (React, TypeScript and Material UI) while contributing to an ongoing team project",
+  "Understanding and aligning with an existing codebase and design structure",
+  "Translating design specifications into reusable and maintainable React components",
+],
+  outcome:
+    "The project strengthened my experience in collaborative frontend development, design implementation, React component structuring, and integrating brand visuals into a reusable UI."
+},
 
   {
     id: "smart-greenhouse",
