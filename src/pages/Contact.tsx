@@ -48,14 +48,14 @@ export default function Contact() {
             <Typography variant="subtitle2" sx={{ color: "text.secondary" }}>
               LinkedIn
             </Typography>
-            <Link
+            {/* <Link
               href="https://linkedin.com/in/yourusername"
               target="_blank"
               rel="noopener"
               underline="hover"
             >
-              
-            </Link>
+              linkedin.com/in/yourusername
+            </Link> */}
           </Box>
         </Stack>
       </Paper>
