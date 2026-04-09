@@ -8,7 +8,7 @@ export default function Hero() {
         <Grid container spacing={6} alignItems="center">
           <Grid size={{ xs: 12, md: 7 }}>
             <Typography variant="h2" fontWeight={700}>
-              Mahmod
+              Mahmod Mohammad
             </Typography>
 
             <Typography
