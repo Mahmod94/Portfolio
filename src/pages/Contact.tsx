@@ -26,7 +26,7 @@ export default function Contact() {
               Email
             </Typography>
             <Link href="mailto:mahmodmamd9@gmail.com" underline="hover">
-              mahmodmamd9@gmail.com
+              mahmodmohammad1993@gmail.com
             </Link>
           </Box>
 
@@ -34,14 +34,14 @@ export default function Contact() {
             <Typography variant="subtitle2" sx={{ color: "text.secondary" }}>
               GitHub
             </Typography>
-            <Link
+            {/* <Link
               href="https://github.com/mahmod94"
               target="_blank"
               rel="noopener"
               underline="hover"
             >
               github.com/mahmod94
-            </Link>
+            </Link> */}
           </Box>
 
           <Box>
