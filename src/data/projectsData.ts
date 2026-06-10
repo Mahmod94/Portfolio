@@ -208,46 +208,45 @@ export const projectsData: Project[] = [
     architectureDescription:
       "The system is centered around a scheduler coordinating multiple tasks through internal kernel structures such as the ready list, waiting list, timer list, and mailbox. Input events and SysTick timing affect task execution, while task behavior is reflected through hardware outputs."
   },
-
   {
     id: "game-2048",
     title: "2048 Game",
     shortDescription:
-      "Java desktop implementation of 2048 using MVC architecture, observer-based updates, and custom game logic.",
+      "Java desktop implementation of 2048 built with MVC architecture and the Observer pattern, featuring parallel Swing and console views with sound effects.",
     fullDescription:
-      "Developed a Java version of 2048 with focus on modular architecture, separation of concerns, and object-oriented design. The project was structured using MVC and Observer pattern principles, with support for graphical and console-based views, keyboard input handling, score tracking, win/loss detection, and variable board sizes.",
-    stack: ["Java", "Swing", "MVC", "Observer Pattern", "JUnit", "OOP"],
-    // image: "/images/test.png",
+      "Developed a Java version of 2048 with focus on modular architecture, separation of concerns, and object-oriented design. The project is structured around MVC and the Observer pattern, with three independent observers — a Swing GUI, a console view, and a sound observer — all reacting to the same game model. The slide-and-merge algorithm is extracted into its own class following the Single Responsibility Principle, and the game logic is covered by JUnit 5 tests including event-driven observer verification.",
+    stack: ["Java", "Swing", "MVC", "Observer Pattern", "JUnit 5", "OOP"],
     highlights: [
-      "Implemented full tile movement and merge logic for the game",
-      "Structured the application using MVC architecture",
-      "Used observer-based updates for multiple views",
-      "Built both graphical and console representations of the board",
-      "Added score tracking, random tile generation, and win/loss detection",
-      "Extended the game with selectable board sizes"
+      "Implemented full tile movement and merge logic across all four directions",
+      "Structured the application using MVC with interface-driven design",
+      "Three independent observers (Swing GUI, console, sound) reacting to the same model",
+      "Extracted slide-and-merge algorithm into a separate MoveHandler class (SRP)",
+      "Score tracking, random tile generation, and win/loss detection",
+      "JUnit 5 tests covering move logic, score updates, and observer notifications"
     ],
-    // screenshots: ["/images/test.png"],
     whatIBuilt: [
-      "Developed the game model, controller logic, and multiple views",
-      "Implemented keyboard-based interaction for gameplay",
-      "Built Swing-based graphical rendering of the board",
-      "Added console and sound observers to reflect state changes"
+      "Designed the model, controller, and multiple views from scratch",
+      "Implemented keyboard-based interaction using a custom KeyAdapter controller",
+      "Built Swing-based graphical rendering with color-coded tiles",
+      "Added console and sound observers reflecting state changes in real time",
+      "Wrote unit tests with a custom MockObserver to verify event-driven behavior"
     ],
     technicalHighlights: [
-      "MVC architecture",
-      "Observer-based state updates",
-      "Swing GUI and event handling",
-      "Custom tile movement and merge algorithms",
-      "Support for multiple board sizes",
-      "Modular Java interfaces and abstractions"
+      "MVC architecture with interface-driven design (IGameModel, GameController, Moveable, GameObserver)",
+      "Observer pattern with three independent observers on a single model",
+      "Extracted MoveHandler2048 class following the Single Responsibility Principle",
+      "Defensive board copies to prevent external state mutation",
+      "JUnit 5 tests with custom MockObserver for event verification",
+      "Swing GUI with real-time color-coded tile rendering",
+      "Java 17 switch expressions for clean direction and color handling"
     ],
     challenges: [
-      "Implementing correct tile merge behavior across all movement directions",
-      "Keeping the model independent from presentation logic",
-      "Synchronizing multiple views with the same game state",
-      "Structuring the project cleanly for maintainability and extension"
+      "Implementing correct tile merge behavior across all four movement directions",
+      "Keeping the model fully independent from presentation and input logic",
+      "Synchronizing multiple views with the same game state through the observer pattern",
+      "Designing testable event-driven code that can be verified without a real GUI"
     ],
     outcome:
-      "The project strengthened my Java skills in OOP, architecture, event-driven UI development, and game-state management through a complete desktop application."
+      "The project strengthened my Java skills in OOP, architectural patterns, event-driven UI development, and unit testing of event-based systems."
   },
 ];
