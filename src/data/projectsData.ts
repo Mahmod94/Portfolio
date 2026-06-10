@@ -4,7 +4,7 @@ export type Project = {
   shortDescription: string;
   fullDescription: string;
   stack: string[];
-  image ? : string;
+  image?: string;
   highlights: string[];
   screenshots?: string[];
 
@@ -63,6 +63,68 @@ export const projectsData: Project[] = [
       "Strengthened my experience in collaborative frontend development, React component design, design-to-code implementation, and integration of backend-provided content in a real team project."
   },
 
+  {
+    id: "hotel-booking-system",
+    title: "Hotel Booking System",
+    shortDescription:
+      "Secure REST API for hotel bookings built with Spring Boot, featuring JWT authentication, role-based access control, and structured error handling.",
+    fullDescription:
+      "Designed and built a backend REST API for managing hotel bookings. The system enforces room inventory and capacity rules, supports user registration with hashed passwords, and exposes role-protected endpoints for booking management. The application follows a layered architecture (Controller → Service → Repository) with centralized exception handling and is documented through Swagger UI.",
+    stack: [
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "JWT",
+      "JPA / Hibernate",
+      "H2",
+      "Maven",
+      "OpenAPI / Swagger"
+    ],
+    image: "/images/swagger-ui.png",
+    highlights: [
+      "Implemented JWT authentication with a custom Spring Security filter (OncePerRequestFilter)",
+      "Role-based access control (USER, ADMIN) via URL matchers and @PreAuthorize",
+      "Custom exception classes mapped to structured JSON error responses through @RestControllerAdvice",
+      "Room inventory and guest-capacity enforcement at the service layer",
+      "BCrypt password hashing and DTO pattern to prevent over-posting attacks",
+      "Auto-generated API documentation with Swagger UI and JWT-aware Authorize button",
+      "Externalized JWT secret and token expiration via application.properties"
+    ],
+    screenshots: [
+      "/images/swagger-ui.png",
+      "/images/swagger-rooms.png",
+      "/images/postman-booking.png",
+      "/images/postman-error.png"
+    ],
+    whatIBuilt: [
+      "Designed and implemented the full backend from entity model to REST endpoints",
+      "Built a custom JWT service for token generation and validation",
+      "Implemented a Spring Security filter chain integrated with the JWT layer",
+      "Created a layered architecture separating HTTP, business logic, and persistence concerns",
+      "Designed DTOs to control which fields the client can submit",
+      "Implemented a global exception handler producing consistent error responses",
+      "Added Swagger UI configuration for interactive API exploration"
+    ],
+    technicalHighlights: [
+      "Stateless JWT-based authentication with HS256 signing",
+      "Spring Security filter chain with custom OncePerRequestFilter",
+      "Role-based authorization at both URL and method level",
+      "Centralized error handling with @RestControllerAdvice",
+      "Bean Validation with @NotBlank, @Min, @Max, @Pattern",
+      "Enum-based room inventory and pricing model",
+      "Spring Data JPA derived queries (findByUsername, countByRoomType)",
+      "OpenAPI 3 documentation via springdoc-openapi"
+    ],
+    challenges: [
+      "Integrating a custom JWT filter cleanly into the Spring Security filter chain",
+      "Designing exception flow so business errors surface as structured JSON responses, not stack traces",
+      "Preventing role injection by separating request DTOs from JPA entities",
+      "Ensuring the auth filter handled both valid, invalid, and missing tokens without crashing the request",
+      "Migrating from in-memory users to a fully database-backed UserDetailsService while keeping login working"
+    ],
+    outcome:
+      "Delivered a production-style backend demonstrating modern Spring Boot patterns: stateless JWT auth, layered architecture, validation, structured error handling, and auto-generated documentation. The project sharpened my understanding of Spring Security internals and API design principles."
+  },
   {
     id: "smart-greenhouse",
     title: "Smart Greenhouse",
