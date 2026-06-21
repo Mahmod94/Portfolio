@@ -212,41 +212,42 @@ export const projectsData: Project[] = [
     id: "game-2048",
     title: "2048 Game",
     shortDescription:
-      "Java desktop implementation of 2048 built with MVC architecture and the Observer pattern, featuring parallel Swing and console views with sound effects.",
+      "Java desktop 2048 built on a clean MVC + Observer architecture, where a single game model drives three synchronized views (Swing GUI, console, and sound) and scales to configurable board sizes from 4×4 to 8×8.",
     fullDescription:
-      "Developed a Java version of 2048 with focus on modular architecture, separation of concerns, and object-oriented design. The project is structured around MVC and the Observer pattern, with three independent observers — a Swing GUI, a console view, and a sound observer — all reacting to the same game model. The slide-and-merge algorithm is extracted into its own class following the Single Responsibility Principle, and the game logic is covered by JUnit 5 tests including event-driven observer verification.",
-    stack: ["Java", "Swing", "MVC", "Observer Pattern", "JUnit 5", "OOP"],
+      "A Java implementation of 2048 designed around clean object-oriented architecture, not just gameplay. It's built on MVC and the Observer pattern: a single GameModel holds all state and notifies three independent observers — a Swing GUI, a console view, and a sound observer — which stay in sync without knowing about each other. The model is fully generalized over board size, so the same logic powers a difficulty selector offering 4×4 (hard), 6×6 (medium), and 8×8 (easy) boards. The slide-and-merge algorithm is extracted into its own MoveHandler2048 class (Single Responsibility), the board is exposed only through defensive copies, and the system is driven entirely through interfaces (IGameModel, GameController, Moveable, GameObserver) so views and input methods can be swapped without touching game logic.",
+    stack: ["Java", "Swing", "MVC", "Observer Pattern", "Java Sound API", "OOP"],
     highlights: [
-      "Implemented full tile movement and merge logic across all four directions",
+      "Size-generalized model powering a difficulty selector (4×4, 6×6, 8×8) — no logic hardcoded to a 4×4 grid",
+      "Full tile movement and merge logic across all four directions, working on any board size",
       "Structured the application using MVC with interface-driven design",
       "Three independent observers (Swing GUI, console, sound) reacting to the same model",
-      "Extracted slide-and-merge algorithm into a separate MoveHandler class (SRP)",
-      "Score tracking, random tile generation, and win/loss detection",
-      "JUnit 5 tests covering move logic, score updates, and observer notifications"
+      "Extracted slide-and-merge algorithm into a separate MoveHandler2048 class (SRP)",
+      "Score tracking, random tile spawning, and win (2048) / loss (no moves) detection"
     ],
     whatIBuilt: [
-      "Designed the model, controller, and multiple views from scratch",
-      "Implemented keyboard-based interaction using a custom KeyAdapter controller",
-      "Built Swing-based graphical rendering with color-coded tiles",
-      "Added console and sound observers reflecting state changes in real time",
-      "Wrote unit tests with a custom MockObserver to verify event-driven behavior"
+      "Designed the model, controllers, and multiple views from scratch",
+      "Built a size-generalized GameModel and a Swing difficulty selector (4×4 / 6×6 / 8×8)",
+      "Implemented keyboard control via WASD and arrow keys (Enter to restart, Esc to exit) using a custom KeyAdapter controller",
+      "Built Swing-based graphical rendering with color-coded tiles that adapts to board size",
+      "Added console and sound observers reflecting state changes in real time"
     ],
     technicalHighlights: [
       "MVC architecture with interface-driven design (IGameModel, GameController, Moveable, GameObserver)",
       "Observer pattern with three independent observers on a single model",
+      "Size-generalized board model — slide/merge logic works for any N×N grid",
       "Extracted MoveHandler2048 class following the Single Responsibility Principle",
       "Defensive board copies to prevent external state mutation",
-      "JUnit 5 tests with custom MockObserver for event verification",
+      "Sound feedback through the Java Sound API (AudioSystem / Clip)",
       "Swing GUI with real-time color-coded tile rendering",
-      "Java 17 switch expressions for clean direction and color handling"
+      "Modern Java switch expressions (arrow syntax) for clean direction handling"
     ],
     challenges: [
       "Implementing correct tile merge behavior across all four movement directions",
+      "Generalizing the slide-and-merge logic so it works for any board size, not just 4×4",
       "Keeping the model fully independent from presentation and input logic",
-      "Synchronizing multiple views with the same game state through the observer pattern",
-      "Designing testable event-driven code that can be verified without a real GUI"
+      "Synchronizing multiple views with the same game state through the observer pattern"
     ],
     outcome:
-      "The project strengthened my Java skills in OOP, architectural patterns, event-driven UI development, and unit testing of event-based systems."
+      "The project strengthened my Java skills in object-oriented design, architectural patterns (MVC and Observer), and building extensible, loosely-coupled systems where one model cleanly drives multiple synchronized views."
   },
 ];
